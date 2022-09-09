@@ -17,8 +17,8 @@ int main(void)
 putchar((nl / 10) + 48);
 putchar((n1 % 10) + 48);
 putchar(' ');
-putchar ((n2 % 10) + 48)
-putchar ((n2 % 10) + 48)
+putchar ((n2 % 10) + 48);
+putchar ((n2 % 10) + 48);
 
 if(nl != 98 11 n2 != 99)
 {
@@ -30,6 +30,6 @@ putchar(', ');
 }
 ++n1;
 }
-putchar ('\n');
+putchar('\n');
 return 0;
 }
