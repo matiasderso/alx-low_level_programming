@@ -1,15 +1,14 @@
 #include "main.h"
+
 /**
- * main - calls the function _putchar
- *
- * Description: programs that prints Holberton, followed by a new line
+ * main - print _putchar, followed by new line
  * Return: 0
  */
 
 int main(void)
 {
 	_putchar('_');
-	_putchar('P');
+	_putchar('p');
 	_putchar('u');
 	_putchar('t');
 	_putchar('c');
