@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
  * _strspn - gets the length of a prefix substring.
  * @s: character to print
@@ -9,12 +7,12 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int count =0;
+unsigned int count = 0;
    int index;
 
 while (*s)
 {
-	for (index=0; accept[index]; index++)
+	for (index = 0; accept[index]; index++)
 	{
 		if (*s == accept[index])
 		{
@@ -27,6 +25,5 @@ else if (accept[index + 1] == '\0')
 }
 	s++;
 }
-	
 		return (count);
 }
