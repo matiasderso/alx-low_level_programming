@@ -1,69 +1,24 @@
-#include "holberton.h"
+#include "main.h"
 
-
-
-/**
-
- * primeFinder - searches for if a number is prime
-
- *
-
- * @a: the number to check
-
- * @b: the numbers we'll go through
-
- *
-
- * Return: Whether or not the number is a prime number
-
- */
-
-
-
-int primeFinder(int a, int b)
-
+int is_prime(int n, int divisor)
 {
-
-	if (a <= 1 || a % b == 0)
-
-		return (0);
-
-	else if (a == b)
-
+	if (n == divisor)
 		return (1);
-
-	else if (a > b)
-
-		primeFinder(a, b + 1);
-
-
-
-	return (1);
+	if (n % divisor == 0)
+		return (0);
+	return (is_prime(n, divisor + 1));
 
 }
 
 
-
-/**
-
- * is_prime_number - tells us if an integer is a prime number or not
-
- *
-
- * @n: the number to check
-
- *
-
- * Return: 0 if the number is not prime, and 1 if it is
-
- */
-
-
-
 int is_prime_number(int n)
-
 {
+	int divisor = 3;
 
-	return (primeFinder(n, 2));
+	if (n % 2 == 0 || n < 2)
+		return (0);
+	if (n == 2)
+		return (1);
 
+	return (is_prime(n, divisor));
 }
