@@ -1,43 +1,22 @@
-#include "holberton.h"
-
-
+#include "main.h"
 
 /**
-
- * _pow_recursion - unction that returns value of x raised to the power of y.
-
- * @x: first integer
-
- * @y: second integer
-
- * Return: Result
-
+ * _pow_recursion - raise x to power y
+ * @x: number
+ * @y: power to raise to
+ * Return: power of a number, -1 if power less than 0
  */
 
 int _pow_recursion(int x, int y)
-
 {
-
-	int pw = 1;
-
-
-
 	if (y < 0)
-
 		return (-1);
 
+	if (x == 0)
+		return (0);
 
-
-	if (!y)
-
+	if (x == 1 || y == 0)
 		return (1);
 
-
-
-	pw = _pow_recursion(x, y - 1);
-
-
-
-	return (pw * x);
-
+	return (x * _pow_recursion(x, y - 1));
 }
